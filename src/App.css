@@ -1,0 +1,10 @@
+
+.glass-button {
+  @apply px-6 py-3 rounded-xl bg-white/10 text-white backdrop-blur-lg shadow-lg hover:bg-white/20 transition;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
