@@ -66,9 +66,9 @@ export default function UptimeReport() {
       }
 
       const collapseState: { [id: string]: boolean } = {};
-      result.items.forEach(
-        (group) => (collapseState[group.monitoredServiceId] = false)
-      );
+      result.items.forEach((group: ServiceUptimeGroup) => {
+        collapseState[group.monitoredServiceId] = false;
+      });
       setExpandedGroups(collapseState);
     } catch (err) {
       console.error("Failed to fetch report", err);
@@ -138,7 +138,7 @@ export default function UptimeReport() {
         >
           {loading ? "Loading..." : "🔍 Analyze"}
         </button>
-        {loading && <CustomLoading />} 
+        {loading && <CustomLoading />}
       </>
 
       {data.length === 0 && (
