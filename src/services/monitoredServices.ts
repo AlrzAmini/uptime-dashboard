@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://localhost:44368',
+  baseURL: 'https://uptimex-api.liara.run',
   timeout: 7000,
 });
 
